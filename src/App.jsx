@@ -5,7 +5,7 @@ export default function App(){
 
     function getRandomDice(){
         const diceArray=[];
-        for (let i=0;i<10;i++){
+        for (let i=0;i<15;i++){
             diceArray.push(Math.ceil(Math.random()*6))
         }
         return diceArray;
