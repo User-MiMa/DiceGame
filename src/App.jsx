@@ -1,38 +1,22 @@
 import Dice from "./components/Dice";
+import { useState } from "react";
 
 export default function App(){
+
+    function getRandomDice(){
+        const diceArray=[];
+        for (let i=0;i<10;i++){
+            diceArray.push(Math.ceil(Math.random()*6))
+        }
+        return diceArray;
+    }
+
+    const [dice, setDice] = useState(getRandomDice())
+    const diceElements = dice.map(num => <Dice value={num} />)
+
     return (
         <main>
-            <Dice
-            value={1}
-            />
-            <Dice
-            value={2}
-            />
-            <Dice
-            value={3}
-            />
-            <Dice
-            value={4}
-            />
-            <Dice
-            value={5}
-            />
-            <Dice
-            value={6}
-            />
-            <Dice
-            value={6}
-            />
-            <Dice
-            value={6}
-            />
-            <Dice
-            value={6}
-            />
-            <Dice
-            value={6}
-            />
+            {diceElements}
         </main>
     );
 }
