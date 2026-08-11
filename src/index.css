@@ -11,14 +11,31 @@ body {
 
     margin: 0;
     
+<<<<<<< HEAD
     background-color: #8a0000;
+=======
+    background-color: #4b0000;
+>>>>>>> dev
 
     height: 100dvh;
 }
 
 main{
+<<<<<<< HEAD
     display: grid;
     grid-template-columns: repeat(2,1fr);
+=======
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.diceContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+>>>>>>> dev
     grid-template-rows: repeat(5,1fr);
     justify-items: center;
     align-items: center;
@@ -33,7 +50,11 @@ main{
     border-radius: 10px;
 }
 
+<<<<<<< HEAD
 button{
+=======
+.diceContainer button{
+>>>>>>> dev
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,24 +74,79 @@ button{
 
     border: none;
     border-radius: 10px;
+<<<<<<< HEAD
 }
 
 @media (min-width: 480px){
 
+=======
+
+    cursor: pointer;
+}
+
+button.rollDice{
+    height: 50px;
+    width: 100%;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #ff9318;
+    color: black;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    cursor: pointer;
+>>>>>>> dev
 }
 
 @media (min-width: 768px){
 
+<<<<<<< HEAD
+=======
+    button.rollDice{
+    height: 80px;
+    }
+
+    .diceContainer button{
+        height: 150px;
+        width: 150px;
+    }
+
+>>>>>>> dev
 }
 
 @media (min-width: 1024px){
 
+<<<<<<< HEAD
+=======
+    .diceContainer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    }
+
+    .diceContainer button{
+        height: 170px;
+        width: 170px;
+    }
+
+>>>>>>> dev
 }
 
 @media (min-width: 1280px){
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
 }
 
 @media (min-width: 1440px){
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
 }
