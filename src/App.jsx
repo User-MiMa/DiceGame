@@ -16,7 +16,10 @@ export default function App(){
 
     return (
         <main>
-            {diceElements}
+            <div className="diceContainer">
+                {diceElements}
+            </div>
+            <button className="rollDice">Roll</button>
         </main>
     );
 }
