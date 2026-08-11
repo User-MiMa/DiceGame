@@ -14,12 +14,19 @@ export default function App(){
     const [dice, setDice] = useState(getRandomDice())
     const diceElements = dice.map(num => <Dice value={num} />)
 
+    function rollDice(){
+        setDice(getRandomDice());
+    }
+
     return (
         <main>
             <div className="diceContainer">
                 {diceElements}
             </div>
-            <button className="rollDice">Roll</button>
+            <button className="rollDice"
+                    onClick={rollDice}>
+                Roll
+            </button>
         </main>
     );
 }
