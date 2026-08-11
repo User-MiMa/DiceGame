@@ -3,5 +3,74 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Inter, sans-serif;
+
     margin: 0;
+    
+    background-color: #8a0000;
+
+    height: 100dvh;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,1fr);
+    justify-items: center;
+    align-items: center;
+
+    background-color: #cecaca;
+
+    height: 85vh;
+    width: 85vw;
+    height: 85dvh;
+    width: 85dvw;
+
+    border-radius: 10px;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Inter, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, 
+                rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, 
+                rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    
+    width: 100px;
+    height: 100px;
+
+    background-color: #f0f0f0;
+
+    border: none;
+    border-radius: 10px;
+}
+
+@media (min-width: 480px){
+
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 1024px){
+
+}
+
+@media (min-width: 1280px){
+
+}
+
+@media (min-width: 1440px){
+
 }
