@@ -20,7 +20,7 @@ export default function App(){
         return diceArray;
     }
 
-    const [dice, setDice] = useState(getRandomDice())
+    const [dice, setDice] = useState(()=>getRandomDice())
     const diceElements = dice.map(die => <Dice key={die.id} id={die.id} value={die.value} isHeld={die.isHeld} fn={holdDie}/>)
 
     function rollDice(){
