@@ -4,6 +4,8 @@
 
 **English:** Classic Tenzies dice game: roll 15 dice, hold the ones showing the same value, and re-roll the rest until all dice show the same number and are held. Built with Vite + React 19. Containerized with Nginx for production.
 
+**🔗 Demo en vivo / Live demo:** [https://dicegame-9kuu.onrender.com/](https://dicegame-9kuu.onrender.com/)
+
 > **Nota:** Este proyecto es un ejercicio de aprendizaje diseñado para demostrar el uso de `useState`, `useRef` y `useEffect` en React. 
 >
 > **Note:** This project is a learning exercise designed to demonstrate `useState`, `useRef` and `useEffect` usage in React. 
