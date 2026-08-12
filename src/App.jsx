@@ -12,7 +12,7 @@ export default function App(){
             diceArray.push(
                 {
                     id: nanoid(),
-                    value: 1,
+                    value: Math.ceil(Math.random()*6),
                     isHeld: false
                 }
             )
