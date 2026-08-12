@@ -6,6 +6,12 @@ export default function Dice(props){
         props.fn(props.id)
     }
     return(
-        <button onClick={triggerHoldDie} style={styles}>{props.value}</button>
+        <button 
+        onClick={triggerHoldDie} 
+        style={styles}
+        aria-pressed={props.isHeld}
+        aria-label={`This die has the value ${props.value}, 
+        ${props.isHeld ? "Held" : "Not held"}`}>
+            {props.value}</button>
     );
 }

@@ -81,6 +81,21 @@ button.rollDice{
     cursor: pointer;
 }
 
+button.rollDice:focus {
+  outline: 3px solid #4A90D9;
+  outline-offset: 2px;
+}
+
+.accessibility-announcement{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 @media (min-width: 768px){
 
     button.rollDice{
@@ -106,15 +121,5 @@ button.rollDice{
         height: 170px;
         width: 170px;
     }
-
-}
-
-@media (min-width: 1280px){
-
-
-}
-
-@media (min-width: 1440px){
-
 
 }

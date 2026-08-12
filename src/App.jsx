@@ -1,5 +1,5 @@
 import Dice from "./components/Dice";
-import { act, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { nanoid } from "nanoid";
 import Confetti from "react-confetti";
 
@@ -12,7 +12,7 @@ export default function App(){
             diceArray.push(
                 {
                     id: nanoid(),
-                    value: Math.ceil(Math.random()*6),
+                    value: 1,
                     isHeld: false
                 }
             )
@@ -45,13 +45,24 @@ export default function App(){
         setDice(getRandomDice)
     }
 
+    const newGameButtonRef=useRef(null)
+
+    useEffect(()=>{
+        if(gameWon){ newGameButtonRef.current.focus() }
+    }
+    ,[gameWon])
+
     return (
         <main>
             {gameWon && <Confetti />}
+            <div aria-live="polite" className="accessibility-announcement">
+                {gameWon && <p>You won! Press "New Game" to start again.</p>}
+            </div>
             <div className="diceContainer">
                 {diceElements}
             </div>
-            <button className="rollDice"
+            <button ref={newGameButtonRef}
+                    className="rollDice"
                     onClick={gameWon ? newGame: rollDice}>
                 {gameWon ? "New Game" : "Roll"}
             </button>
