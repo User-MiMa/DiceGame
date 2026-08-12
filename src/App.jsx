@@ -41,6 +41,10 @@ export default function App(){
 
     const gameWon = dice.every(die=>die.isHeld) && dice.every(die=>die.value===dice[0].value);
 
+    function newGame(){
+        setDice(getRandomDice)
+    }
+
     return (
         <main>
             {gameWon && <Confetti />}
@@ -48,7 +52,7 @@ export default function App(){
                 {diceElements}
             </div>
             <button className="rollDice"
-                    onClick={rollDice}>
+                    onClick={gameWon ? newGame: rollDice}>
                 {gameWon ? "New Game" : "Roll"}
             </button>
         </main>
