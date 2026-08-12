@@ -1,6 +1,7 @@
 import Dice from "./components/Dice";
 import { act, useState } from "react";
 import { nanoid } from "nanoid";
+import Confetti from "react-confetti";
 
 
 export default function App(){
@@ -38,15 +39,17 @@ export default function App(){
         )
     }
 
+    const gameWon = dice.every(die=>die.isHeld) && dice.every(die=>die.value===dice[0].value);
 
     return (
         <main>
+            {gameWon && <Confetti />}
             <div className="diceContainer">
                 {diceElements}
             </div>
             <button className="rollDice"
                     onClick={rollDice}>
-                Roll
+                {gameWon ? "New Game" : "Roll"}
             </button>
         </main>
     );
